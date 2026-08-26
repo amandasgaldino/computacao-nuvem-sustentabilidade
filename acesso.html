@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Computação em Nuvem e Sustentabilidade</title>
+
+    <style>
+
+        /* =========================
+           CONFIGURAÇÕES GERAIS
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            min-height: 100vh;
+
+            background:
+                radial-gradient(
+                    circle at 20% 20%,
+                    rgba(21, 153, 208, 0.15),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 80% 80%,
+                    rgba(105, 183, 216, 0.10),
+                    transparent 30%
+                ),
+
+                #071A2B;
+
+            color: #FFFFFF;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 30px;
+        }
+
+
+        /* =========================
+           CONTAINER PRINCIPAL
+        ========================== */
+
+        .acesso {
+
+            width: 100%;
+
+            max-width: 850px;
+
+            text-align: center;
+
+            padding: 50px 35px;
+
+        }
+
+
+        /* =========================
+           ÍCONE DA NUVEM
+        ========================== */
+
+        .nuvem {
+
+            font-size: 85px;
+
+            color: #69B7D8;
+
+            margin-bottom: 10px;
+
+            filter:
+                drop-shadow(
+                    0 0 25px
+                    rgba(21, 153, 208, 0.45)
+                );
+
+            animation: flutuar 3s
+                ease-in-out infinite;
+        }
+
+
+        @keyframes flutuar {
+
+            0%,
+            100% {
+
+                transform:
+                    translateY(0);
+            }
+
+            50% {
+
+                transform:
+                    translateY(-10px);
+            }
+        }
+
+
+        /* =========================
+           TÍTULO
+        ========================== */
+
+        .tag {
+
+            color: #69B7D8;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            letter-spacing: 4px;
+
+            margin-bottom: 18px;
+        }
+
+
+        h1 {
+
+            font-size:
+                clamp(35px, 6vw, 60px);
+
+            line-height: 1.1;
+
+            margin-bottom: 20px;
+        }
+
+
+        h1 span {
+
+            display: block;
+
+            color: #1599D0;
+        }
+
+
+        .descricao {
+
+            color: #C9D6DF;
+
+            font-size: 18px;
+
+            margin-bottom: 45px;
+        }
+
+
+        /* =========================
+           OPÇÕES
+        ========================== */
+
+        .opcoes {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 20px;
+
+            max-width: 750px;
+
+            margin: 0 auto;
+        }
+
+
+        /* =========================
+           CARD / BOTÃO
+        ========================== */
+
+        .opcao {
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            text-align: left;
+
+            gap: 20px;
+
+            min-height: 180px;
+
+            padding: 30px;
+
+            background: #0B263D;
+
+            border: 1px solid
+                rgba(105, 183, 216, 0.25);
+
+            border-radius: 12px;
+
+            color: #FFFFFF;
+
+            text-decoration: none;
+
+            transition:
+                transform 0.3s,
+                border-color 0.3s,
+                background 0.3s,
+                box-shadow 0.3s;
+        }
+
+
+        .opcao:hover {
+
+            transform:
+                translateY(-8px);
+
+            border-color:
+                #1599D0;
+
+            background:
+                #0D304A;
+
+            box-shadow:
+                0 15px 40px
+                rgba(0, 0, 0, 0.25);
+        }
+
+
+        /* =========================
+           ÍCONE DOS CARDS
+        ========================== */
+
+        .icone {
+
+            min-width: 65px;
+
+            height: 65px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 10px;
+
+            background:
+                rgba(21, 153, 208, 0.15);
+
+            border:
+                1px solid
+                rgba(105, 183, 216, 0.25);
+
+            font-size: 30px;
+
+            color: #69B7D8;
+        }
+
+
+        /* =========================
+           TEXTO DOS CARDS
+        ========================== */
+
+        .opcao h2 {
+
+            font-size: 21px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .opcao p {
+
+            color: #C9D6DF;
+
+            font-size: 14px;
+
+            line-height: 1.5;
+
+            margin-right: 20px;
+        }
+
+
+        /* =========================
+           SETA
+        ========================== */
+
+        .seta {
+
+            position: absolute;
+
+            right: 20px;
+
+            bottom: 18px;
+
+            color: #1599D0;
+
+            font-size: 25px;
+
+            transition: 0.3s;
+        }
+
+
+        .opcao:hover .seta {
+
+            transform:
+                translateX(5px);
+
+            color: #69B7D8;
+        }
+
+
+        /* =========================
+           RODAPÉ
+        ========================== */
+
+        .rodape {
+
+            margin-top: 40px;
+
+            color: #C9D6DF;
+
+            font-size: 14px;
+
+            opacity: 0.8;
+        }
+
+
+        /* =========================
+           LINHA DECORATIVA
+        ========================== */
+
+        .linha {
+
+            width: 80px;
+
+            height: 3px;
+
+            background: #1599D0;
+
+            margin: 25px auto;
+
+            border-radius: 5px;
+        }
+
+
+        /* =========================
+           RESPONSIVIDADE
+        ========================== */
+
+        @media (max-width: 700px) {
+
+            body {
+
+                padding: 15px;
+            }
+
+
+            .acesso {
+
+                padding:
+                    30px 10px;
+            }
+
+
+            .opcoes {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .nuvem {
+
+                font-size: 70px;
+            }
+
+
+            h1 {
+
+                font-size: 38px;
+            }
+
+
+            .descricao {
+
+                font-size: 16px;
+
+                margin-bottom: 30px;
+            }
+
+
+            .opcao {
+
+                min-height: 150px;
+
+                padding: 25px;
+            }
+        }
+
+
+        @media (max-width: 400px) {
+
+            .opcao {
+
+                gap: 12px;
+
+                padding: 20px;
+            }
+
+
+            .icone {
+
+                min-width: 55px;
+
+                width: 55px;
+
+                height: 55px;
+
+                font-size: 25px;
+            }
+
+
+            .opcao h2 {
+
+                font-size: 17px;
+            }
+
+
+            .opcao p {
+
+                font-size: 13px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <main class="acesso">
+
+
+        <!-- ÍCONE -->
+
+        <div class="nuvem">
+            ☁
+        </div>
+
+
+        <!-- TÍTULO -->
+
+        <p class="tag">
+            CIÊNCIA DA COMPUTAÇÃO
+        </p>
+
+
+        <h1>
+
+            Computação em Nuvem
+
+            <span>
+                e Sustentabilidade
+            </span>
+
+        </h1>
+
+
+        <div class="linha"></div>
+
+
+        <p class="descricao">
+
+            Escolha uma opção para continuar.
+
+        </p>
+
+
+        <!-- =========================
+             OPÇÕES
+        ========================== -->
+
+        <div class="opcoes">
+
+
+            <!-- =========================
+                 OPÇÃO 1 — SITE
+            ========================== -->
+
+            <a
+                href="https://SEU-SITE-AQUI.com"
+                class="opcao"
+            >
+
+                <div class="icone">
+                    ☁
+                </div>
+
+
+                <div>
+
+                    <h2>
+                        Conhecer o projeto
+                    </h2>
+
+
+                    <p>
+
+                        Acesse nossa página web
+                        interativa e descubra como
+                        a computação em nuvem pode
+                        contribuir para a sustentabilidade.
+
+                    </p>
+
+                </div>
+
+
+                <span class="seta">
+                    →
+                </span>
+
+            </a>
+
+
+
+            <!-- =========================
+                 OPÇÃO 2 — GOOGLE FORMS
+            ========================== -->
+
+            <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeRQzANUAI_yOdc_QsF1TcEmFwUJ51s8gMz07EgyyzTPx3p7Q/viewform?usp=sharing&ouid=104215584824218539044"
+                class="opcao"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <div class="icone">
+                    📝
+                </div>
+
+
+                <div>
+
+                    <h2>
+                        Pesquisa de satisfação
+                    </h2>
+
+
+                    <p>
+
+                        Responda à nossa pesquisa
+                        de satisfação e ajude a
+                        avaliar o nosso projeto.
+
+                    </p>
+
+                </div>
+
+
+                <span class="seta">
+                    →
+                </span>
+
+            </a>
+
+
+        </div>
+
+
+        <!-- =========================
+             RODAPÉ
+        ========================== -->
+
+        <p class="rodape">
+
+            Obrigado por participar
+            do nosso projeto!
+
+        </p>
+
+
+    </main>
+
+
+</body>
+
+</html>
