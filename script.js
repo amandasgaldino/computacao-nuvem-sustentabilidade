@@ -1,7 +1,3 @@
-/* =========================
-   CARACTERÍSTICAS DA NUVEM
-========================= */
-
 function mostrarCaracteristica(tipo) {
 
     const caixa = document.getElementById(
@@ -11,25 +7,21 @@ function mostrarCaracteristica(tipo) {
     const textos = {
 
         internet:
-            "Os recursos e serviços podem ser acessados pela internet a partir de diferentes dispositivos e locais.",
+            "As ferramentas de Inteligência Artificial podem ser acessadas pela internet a partir de diferentes dispositivos, como computadores, celulares e tablets.",
 
         escala:
-            "A infraestrutura pode ser ampliada ou reduzida conforme a necessidade dos usuários.",
+            "As ferramentas de IA podem ser utilizadas em diferentes situações, desde tarefas simples do dia a dia até atividades que exigem maior processamento de informações.",
 
         flexibilidade:
-            "A computação em nuvem permite acessar recursos e serviços de diferentes locais e dispositivos.",
+            "A Inteligência Artificial pode ser utilizada em diferentes locais e dispositivos para auxiliar em estudos, pesquisas, organização de informações, comunicação e trabalho.",
 
         compartilhamento:
-            "Os recursos computacionais podem ser compartilhados entre múltiplos usuários, favorecendo o melhor aproveitamento da infraestrutura."
+            "As ferramentas de IA podem apoiar diferentes pessoas em atividades de aprendizagem, produção de conteúdos, pesquisas e organização de informações."
     };
 
     caixa.textContent = textos[tipo];
 }
 
-
-/* =========================
-   MODELOS IAAS / PAAS / SAAS
-========================= */
 
 function mostrarModelo(modelo) {
 
@@ -40,62 +32,58 @@ function mostrarModelo(modelo) {
     if (modelo === "iaas") {
 
         caixa.innerHTML = `
-            <h3>IaaS — Infraestrutura como Serviço</h3>
+            <h3>Assistentes de Inteligência Artificial</h3>
 
             <p>
-                Fornece servidores virtuais, redes e armazenamento
-                pela internet. O usuário possui maior controle sobre
-                o sistema operacional e as aplicações.
+                São ferramentas que podem auxiliar o usuário em
+                tarefas como pesquisas, organização de informações,
+                estudos e esclarecimento de dúvidas.
             </p>
 
             <p>
-                Exemplos: AWS EC2, Google Compute Engine e
-                Microsoft Azure VMs.
+                Exemplos: assistentes virtuais e ferramentas de IA
+                disponíveis em aplicativos e plataformas digitais.
             </p>
         `;
     }
-
 
     if (modelo === "paas") {
 
         caixa.innerHTML = `
-            <h3>PaaS — Plataforma como Serviço</h3>
+            <h3>IA Generativa</h3>
 
             <p>
-                Oferece plataformas e ferramentas para desenvolvimento
-                de aplicações sem que o usuário precise gerenciar
-                diretamente a infraestrutura subjacente.
+                É um tipo de Inteligência Artificial capaz de gerar
+                conteúdos a partir de comandos fornecidos pelo usuário,
+                como textos, imagens, áudios e outros materiais.
             </p>
 
             <p>
-                Exemplos: Google App Engine, Heroku e Azure App Service.
+                Exemplos: ferramentas de geração de textos, imagens
+                e outros conteúdos utilizando Inteligência Artificial.
             </p>
         `;
     }
 
-
     if (modelo === "saas") {
 
         caixa.innerHTML = `
-            <h3>SaaS — Software como Serviço</h3>
+            <h3>IA em Aplicativos e Plataformas</h3>
 
             <p>
-                Disponibiliza aplicações completas pela internet,
-                acessíveis por navegador ou aplicativo, sem necessidade
-                de instalação local.
+                A Inteligência Artificial também está presente em
+                aplicativos, mecanismos de busca, redes sociais e
+                plataformas digitais utilizadas no cotidiano.
             </p>
 
             <p>
-                Exemplos: Google Drive, Microsoft 365, Dropbox e Zoom.
+                Ela pode auxiliar em recomendações, pesquisas,
+                comunicação, organização de informações e outras tarefas.
             </p>
         `;
     }
 }
 
-
-/* =========================
-   MITO OU VERDADE
-========================= */
 
 function verificarMito(resposta) {
 
@@ -108,9 +96,9 @@ function verificarMito(resposta) {
         resultado.innerHTML = `
             <strong>Resposta correta!</strong><br><br>
 
-            A computação em nuvem não é livre de impactos ambientais.
-            Ela envolve consumo de energia, sistemas de refrigeração,
-            equipamentos eletrônicos e infraestrutura de data centers.
+            A Inteligência Artificial pode apresentar erros,
+            informações incompletas ou inadequadas. Por isso,
+            as respostas geradas devem ser verificadas pelo usuário.
         `;
 
     } else {
@@ -118,167 +106,155 @@ function verificarMito(resposta) {
         resultado.innerHTML = `
             <strong>Não é a alternativa correta.</strong><br><br>
 
-            A computação em nuvem também apresenta impactos ambientais,
-            como consumo de energia, refrigeração e infraestrutura
-            dos data centers.
+            A Inteligência Artificial não é infalível.
+            É importante analisar as informações geradas,
+            verificar as fontes e utilizar a tecnologia de forma
+            consciente e responsável.
         `;
     }
 }
 
 
-/* =========================
-   QUIZ
-========================= */
-
 const perguntas = [
 
     {
         pergunta:
-            "Qual é uma característica da computação em nuvem?",
+            "O que é Inteligência Artificial?",
 
         opcoes: [
-            "Acesso apenas por um computador específico",
-            "Acesso pela internet",
-            "Ausência de recursos compartilhados",
-            "Necessidade obrigatória de infraestrutura local"
+            "Uma tecnologia utilizada somente para jogos",
+            "Uma tecnologia que permite às máquinas realizar tarefas relacionadas à inteligência humana",
+            "Um tipo de computador sem programas",
+            "Um sistema utilizado somente para armazenar arquivos"
         ],
 
         correta: 1
     },
 
-
     {
         pergunta:
-            "O que os data centers precisam consumir para operar e manter seus sistemas de refrigeração?",
+            "Qual dessas é uma aplicação da Inteligência Artificial no cotidiano?",
 
         opcoes: [
-            "Energia elétrica",
-            "Somente papel",
-            "Apenas água potável",
-            "Somente materiais recicláveis"
+            "Recomendações em plataformas digitais",
+            "Somente impressão de documentos",
+            "Apenas armazenamento de papel",
+            "Somente utilização de calculadoras"
         ],
 
         correta: 0
     },
 
-
     {
         pergunta:
-            "Qual tecnologia permite criar máquinas virtuais a partir de servidores físicos?",
+            "O que é IA generativa?",
 
         opcoes: [
-            "Virtualização",
-            "Impressão digital",
-            "Videoconferência",
-            "Armazenamento físico"
-        ],
-
-        correta: 0
-    },
-
-
-    {
-        pergunta:
-            "Qual modelo de nuvem oferece maior controle ao usuário?",
-
-        opcoes: [
-            "SaaS",
-            "PaaS",
-            "IaaS",
-            "Nenhum deles"
+            "Uma tecnologia utilizada apenas para armazenar arquivos",
+            "Um sistema que não produz nenhum conteúdo",
+            "Uma Inteligência Artificial capaz de gerar conteúdos a partir de comandos",
+            "Um tipo de conexão de internet"
         ],
 
         correta: 2
     },
 
+    {
+        pergunta:
+            "Qual dessas atividades pode ser auxiliada por ferramentas de Inteligência Artificial?",
+
+        opcoes: [
+            "Pesquisas e estudos",
+            "Somente atividades realizadas sem computador",
+            "Apenas impressão de documentos",
+            "Somente manutenção de equipamentos"
+        ],
+
+        correta: 0
+    },
 
     {
         pergunta:
-            "Qual modelo disponibiliza aplicações completas pela internet?",
+            "Por que é importante verificar informações fornecidas por uma ferramenta de IA?",
 
         opcoes: [
-            "IaaS",
-            "PaaS",
-            "SaaS",
-            "Data Center"
+            "Porque a IA nunca consegue gerar respostas",
+            "Porque as respostas podem apresentar erros ou informações incompletas",
+            "Porque a IA funciona somente sem internet",
+            "Porque nenhuma ferramenta de IA consegue produzir textos"
+        ],
+
+        correta: 1
+    },
+
+    {
+        pergunta:
+            "Qual cuidado é importante ao utilizar ferramentas de Inteligência Artificial?",
+
+        opcoes: [
+            "Compartilhar todos os dados pessoais",
+            "Confiar em todas as respostas sem verificar",
+            "Evitar a análise das informações",
+            "Ter cuidado com dados pessoais e informações sensíveis"
+        ],
+
+        correta: 3
+    },
+
+    {
+        pergunta:
+            "Em quais áreas a Inteligência Artificial pode ser utilizada?",
+
+        opcoes: [
+            "Somente em jogos",
+            "Somente em redes sociais",
+            "Em estudos, trabalho, comunicação, pesquisas e outras atividades",
+            "Somente em computadores antigos"
         ],
 
         correta: 2
     },
 
-
     {
         pergunta:
-            "Como a nuvem pode contribuir para reduzir o uso de papel?",
+            "Qual atitude demonstra um uso responsável da Inteligência Artificial?",
 
         opcoes: [
-            "Eliminando todos os documentos",
-            "Utilizando armazenamento digital e colaboração online",
-            "Aumentando a impressão de documentos",
-            "Substituindo computadores por papel"
-        ],
-
-        correta: 1
-    },
-
-
-    {
-        pergunta:
-            "Como videoconferências e trabalho remoto podem contribuir para a sustentabilidade?",
-
-        opcoes: [
-            "Aumentando deslocamentos",
-            "Reduzindo deslocamentos",
-            "Eliminando a internet",
-            "Aumentando o uso de servidores locais"
-        ],
-
-        correta: 1
-    },
-
-
-    {
-        pergunta:
-            "Qual dessas é uma estratégia de otimização da infraestrutura?",
-
-        opcoes: [
-            "Virtualização",
-            "Aumento do desperdício",
-            "Uso de equipamentos ociosos",
-            "Ausência de monitoramento"
+            "Verificar as informações antes de utilizá-las",
+            "Compartilhar informações pessoais sem cuidado",
+            "Aceitar qualquer resposta como verdadeira",
+            "Utilizar a IA sem considerar possíveis riscos"
         ],
 
         correta: 0
     },
 
-
     {
         pergunta:
-            "Qual ODS está relacionado à Indústria, Inovação e Infraestrutura?",
+            "Qual é um possível benefício da Inteligência Artificial?",
 
         opcoes: [
-            "ODS 9",
-            "ODS 12",
-            "ODS 13",
-            "ODS 1"
+            "Auxiliar na realização de tarefas e organização de informações",
+            "Eliminar a necessidade de verificar informações",
+            "Garantir que todas as respostas estejam corretas",
+            "Impedir o acesso das pessoas à tecnologia"
         ],
 
         correta: 0
     },
 
-
     {
         pergunta:
-            "Qual é a ideia principal relacionada à sustentabilidade na computação em nuvem?",
+            "Qual é a principal ideia do uso consciente da Inteligência Artificial?",
 
         opcoes: [
-            "A nuvem não possui nenhum impacto ambiental",
-            "A tecnologia deve ser utilizada de forma eficiente e consciente",
-            "Todo consumo de energia deve ser eliminado",
-            "Os data centers devem deixar de existir"
+            "Utilizar qualquer ferramenta sem preocupação",
+            "Substituir completamente a avaliação humana",
+            "Utilizar a tecnologia de forma responsável, segura e crítica",
+            "Compartilhar todas as informações com as ferramentas de IA"
         ],
 
-        correta: 1
+        correta: 2
     }
 
 ];
@@ -290,10 +266,6 @@ let pontos = 0;
 
 let respondeu = false;
 
-
-/* =========================
-   INICIAR QUIZ
-========================= */
 
 document
     .getElementById("iniciarQuiz")
@@ -307,7 +279,6 @@ function iniciarQuiz() {
     pontos = 0;
 
     respondeu = false;
-
 
     document
         .querySelector(".quiz-intro")
@@ -323,48 +294,36 @@ function iniciarQuiz() {
         .getElementById("quiz-area")
         .classList.remove("escondido");
 
-
     mostrarPergunta();
 }
 
-
-/* =========================
-   MOSTRAR PERGUNTA
-========================= */
 
 function mostrarPergunta() {
 
     respondeu = false;
 
-
     const pergunta =
         perguntas[perguntaAtual];
-
 
     document
         .getElementById("numeroPergunta")
         .textContent =
         `Pergunta ${perguntaAtual + 1} de ${perguntas.length}`;
 
-
     document
         .getElementById("pontuacao")
         .textContent =
         `Pontos: ${pontos}`;
-
 
     document
         .getElementById("pergunta")
         .textContent =
         pergunta.pergunta;
 
-
     const opcoes =
         document.getElementById("opcoes");
 
-
     opcoes.innerHTML = "";
-
 
     pergunta.opcoes.forEach(
         (opcao, indice) => {
@@ -372,11 +331,9 @@ function mostrarPergunta() {
             const botao =
                 document.createElement("button");
 
-
             botao.className = "opcao";
 
             botao.textContent = opcao;
-
 
             botao.addEventListener(
                 "click",
@@ -386,29 +343,21 @@ function mostrarPergunta() {
                 )
             );
 
-
             opcoes.appendChild(botao);
         }
     );
-
 
     document
         .getElementById("feedback")
         .textContent = "";
 
-
     document
         .getElementById("proxima")
         .classList.add("escondido");
 
-
     atualizarProgresso();
 }
 
-
-/* =========================
-   VERIFICAR RESPOSTA
-========================= */
 
 function verificarResposta(
     indice,
@@ -420,23 +369,18 @@ function verificarResposta(
         return;
     }
 
-
     respondeu = true;
-
 
     const pergunta =
         perguntas[perguntaAtual];
 
-
     const botoes =
         document.querySelectorAll(".opcao");
-
 
     botoes.forEach(
         (botao, indiceBotao) => {
 
             botao.disabled = true;
-
 
             if (
                 indiceBotao === pergunta.correta
@@ -449,16 +393,13 @@ function verificarResposta(
         }
     );
 
-
     if (indice === pergunta.correta) {
 
         pontos++;
 
-
         botaoSelecionado.classList.add(
             "correta"
         );
-
 
         document
             .getElementById("feedback")
@@ -471,29 +412,22 @@ function verificarResposta(
             "errada"
         );
 
-
         document
             .getElementById("feedback")
             .textContent =
             `Resposta incorreta. A alternativa correta é: ${pergunta.opcoes[pergunta.correta]}.`;
     }
 
-
     document
         .getElementById("pontuacao")
         .textContent =
         `Pontos: ${pontos}`;
-
 
     document
         .getElementById("proxima")
         .classList.remove("escondido");
 }
 
-
-/* =========================
-   PRÓXIMA PERGUNTA
-========================= */
 
 document
     .getElementById("proxima")
@@ -506,7 +440,6 @@ document
 function proximaPergunta() {
 
     perguntaAtual++;
-
 
     if (
         perguntaAtual <
@@ -522,10 +455,6 @@ function proximaPergunta() {
 }
 
 
-/* =========================
-   PROGRESSO
-========================= */
-
 function atualizarProgresso() {
 
     const porcentagem =
@@ -534,7 +463,6 @@ function atualizarProgresso() {
             perguntas.length
         ) * 100;
 
-
     document
         .getElementById("progresso")
         .style.width =
@@ -542,53 +470,41 @@ function atualizarProgresso() {
 }
 
 
-/* =========================
-   FINALIZAR QUIZ
-========================= */
-
 function finalizarQuiz() {
 
     document
         .getElementById("quiz-area")
         .classList.add("escondido");
 
-
     document
         .getElementById("resultadoQuiz")
         .classList.remove("escondido");
-
 
     document
         .getElementById("pontuacaoFinal")
         .textContent =
         `${pontos} / ${perguntas.length}`;
 
-
     const mensagem =
         document.getElementById("mensagemFinal");
-
 
     if (pontos <= 4) {
 
         mensagem.textContent =
-            "Você pode revisar alguns conceitos da apresentação.";
+            "Você pode revisar alguns conceitos apresentados sobre Inteligência Artificial.";
 
     } else if (pontos <= 7) {
 
         mensagem.textContent =
-            "Bom resultado! Você já compreendeu boa parte dos conceitos.";
+            "Bom resultado! Você já compreendeu boa parte dos conceitos sobre Inteligência Artificial.";
 
     } else {
 
         mensagem.textContent =
-            "Excelente! Você demonstrou um ótimo conhecimento sobre o tema.";
+            "Excelente! Você demonstrou um ótimo conhecimento sobre o uso de ferramentas de Inteligência Artificial.";
     }
 }
 
-
-/* =========================
-   REINICIAR
-========================= */
 
 function reiniciarQuiz() {
 
@@ -596,19 +512,13 @@ function reiniciarQuiz() {
         .getElementById("resultadoQuiz")
         .classList.add("escondido");
 
-
     document
         .querySelector(".quiz-intro")
         .classList.remove("escondido");
 
-
     window.location.hash = "quiz";
 }
 
-
-/* =========================
-   VOLTAR AO TOPO
-========================= */
 
 function voltarTopo() {
 
