@@ -7,13 +7,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Computação em Nuvem e Sustentabilidade</title>
+    <title>Inteligência Artificial no Dia a Dia</title>
 
     <style>
-
-        /* =========================
-           CONFIGURAÇÕES GERAIS
-        ========================== */
 
         * {
             margin: 0;
@@ -21,11 +17,9 @@
             box-sizing: border-box;
         }
 
-
         html {
             scroll-behavior: smooth;
         }
-
 
         body {
 
@@ -36,17 +30,17 @@
             background:
                 radial-gradient(
                     circle at 20% 20%,
-                    rgba(21, 153, 208, 0.15),
+                    rgba(218, 61, 143, 0.16),
                     transparent 30%
                 ),
 
                 radial-gradient(
                     circle at 80% 80%,
-                    rgba(105, 183, 216, 0.10),
+                    rgba(143, 55, 125, 0.13),
                     transparent 30%
                 ),
 
-                #071A2B;
+                #210E1D;
 
             color: #FFFFFF;
 
@@ -58,11 +52,6 @@
 
             padding: 30px;
         }
-
-
-        /* =========================
-           CONTAINER PRINCIPAL
-        ========================== */
 
         .acesso {
 
@@ -76,29 +65,44 @@
 
         }
 
+        .ia {
 
-        /* =========================
-           ÍCONE DA NUVEM
-        ========================== */
+            width: 90px;
 
-        .nuvem {
+            height: 90px;
 
-            font-size: 85px;
+            margin: 0 auto 18px;
 
-            color: #69B7D8;
+            display: flex;
 
-            margin-bottom: 10px;
+            align-items: center;
 
-            filter:
-                drop-shadow(
-                    0 0 25px
-                    rgba(21, 153, 208, 0.45)
-                );
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background:
+                rgba(218, 61, 143, 0.14);
+
+            border:
+                1px solid
+                rgba(239, 126, 181, 0.35);
+
+            color: #EF7EB5;
+
+            font-size: 42px;
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
+
+            box-shadow:
+                0 0 35px
+                rgba(218, 61, 143, 0.25);
 
             animation: flutuar 3s
                 ease-in-out infinite;
         }
-
 
         @keyframes flutuar {
 
@@ -112,18 +116,13 @@
             50% {
 
                 transform:
-                    translateY(-10px);
+                    translateY(-8px);
             }
         }
 
-
-        /* =========================
-           TÍTULO
-        ========================== */
-
         .tag {
 
-            color: #69B7D8;
+            color: #EF7EB5;
 
             font-size: 13px;
 
@@ -133,7 +132,6 @@
 
             margin-bottom: 18px;
         }
-
 
         h1 {
 
@@ -145,28 +143,23 @@
             margin-bottom: 20px;
         }
 
-
         h1 span {
 
             display: block;
 
-            color: #1599D0;
+            color: #DA3D8F;
         }
-
 
         .descricao {
 
-            color: #C9D6DF;
+            color: #E6D5DE;
 
             font-size: 18px;
 
+            line-height: 1.5;
+
             margin-bottom: 45px;
         }
-
-
-        /* =========================
-           OPÇÕES
-        ========================== */
 
         .opcoes {
 
@@ -181,11 +174,6 @@
 
             margin: 0 auto;
         }
-
-
-        /* =========================
-           CARD / BOTÃO
-        ========================== */
 
         .opcao {
 
@@ -203,12 +191,14 @@
 
             padding: 30px;
 
-            background: #0B263D;
+            background:
+                rgba(255, 255, 255, 0.05);
 
-            border: 1px solid
-                rgba(105, 183, 216, 0.25);
+            border:
+                1px solid
+                rgba(239, 126, 181, 0.25);
 
-            border-radius: 12px;
+            border-radius: 16px;
 
             color: #FFFFFF;
 
@@ -221,31 +211,27 @@
                 box-shadow 0.3s;
         }
 
-
         .opcao:hover {
 
             transform:
                 translateY(-8px);
 
             border-color:
-                #1599D0;
+                #DA3D8F;
 
             background:
-                #0D304A;
+                rgba(218, 61, 143, 0.10);
 
             box-shadow:
                 0 15px 40px
-                rgba(0, 0, 0, 0.25);
+                rgba(0, 0, 0, 0.30);
         }
-
-
-        /* =========================
-           ÍCONE DOS CARDS
-        ========================== */
 
         .icone {
 
             min-width: 65px;
+
+            width: 65px;
 
             height: 65px;
 
@@ -255,24 +241,21 @@
 
             justify-content: center;
 
-            border-radius: 10px;
+            border-radius: 14px;
 
             background:
-                rgba(21, 153, 208, 0.15);
+                rgba(218, 61, 143, 0.12);
 
             border:
                 1px solid
-                rgba(105, 183, 216, 0.25);
+                rgba(239, 126, 181, 0.25);
 
-            font-size: 30px;
+            font-size: 25px;
 
-            color: #69B7D8;
+            font-weight: bold;
+
+            color: #EF7EB5;
         }
-
-
-        /* =========================
-           TEXTO DOS CARDS
-        ========================== */
 
         .opcao h2 {
 
@@ -281,10 +264,9 @@
             margin-bottom: 8px;
         }
 
-
         .opcao p {
 
-            color: #C9D6DF;
+            color: #E6D5DE;
 
             font-size: 14px;
 
@@ -292,11 +274,6 @@
 
             margin-right: 20px;
         }
-
-
-        /* =========================
-           SETA
-        ========================== */
 
         .seta {
 
@@ -306,42 +283,31 @@
 
             bottom: 18px;
 
-            color: #1599D0;
+            color: #DA3D8F;
 
             font-size: 25px;
 
             transition: 0.3s;
         }
 
-
         .opcao:hover .seta {
 
             transform:
                 translateX(5px);
 
-            color: #69B7D8;
+            color: #EF7EB5;
         }
-
-
-        /* =========================
-           RODAPÉ
-        ========================== */
 
         .rodape {
 
             margin-top: 40px;
 
-            color: #C9D6DF;
+            color: #E6D5DE;
 
             font-size: 14px;
 
-            opacity: 0.8;
+            opacity: 0.85;
         }
-
-
-        /* =========================
-           LINHA DECORATIVA
-        ========================== */
 
         .linha {
 
@@ -349,17 +315,12 @@
 
             height: 3px;
 
-            background: #1599D0;
+            background: #DA3D8F;
 
             margin: 25px auto;
 
             border-radius: 5px;
         }
-
-
-        /* =========================
-           RESPONSIVIDADE
-        ========================== */
 
         @media (max-width: 700px) {
 
@@ -368,31 +329,30 @@
                 padding: 15px;
             }
 
-
             .acesso {
 
                 padding:
                     30px 10px;
             }
 
-
             .opcoes {
 
                 grid-template-columns: 1fr;
             }
 
+            .ia {
 
-            .nuvem {
+                width: 75px;
 
-                font-size: 70px;
+                height: 75px;
+
+                font-size: 34px;
             }
-
 
             h1 {
 
                 font-size: 38px;
             }
-
 
             .descricao {
 
@@ -401,7 +361,6 @@
                 margin-bottom: 30px;
             }
 
-
             .opcao {
 
                 min-height: 150px;
@@ -409,7 +368,6 @@
                 padding: 25px;
             }
         }
-
 
         @media (max-width: 400px) {
 
@@ -420,7 +378,6 @@
                 padding: 20px;
             }
 
-
             .icone {
 
                 min-width: 55px;
@@ -429,15 +386,13 @@
 
                 height: 55px;
 
-                font-size: 25px;
+                font-size: 21px;
             }
-
 
             .opcao h2 {
 
                 font-size: 17px;
             }
-
 
             .opcao p {
 
@@ -449,68 +404,48 @@
 
 </head>
 
-
 <body>
-
 
     <main class="acesso">
 
-
-        <!-- ÍCONE -->
-
-        <div class="nuvem">
-            ☁
+        <div class="ia">
+            IA
         </div>
-
-
-        <!-- TÍTULO -->
 
         <p class="tag">
             CIÊNCIA DA COMPUTAÇÃO
         </p>
 
-
         <h1>
 
-            Computação em Nuvem
+            Inteligência Artificial
 
             <span>
-                e Sustentabilidade
+                no Dia a Dia
             </span>
 
         </h1>
 
-
         <div class="linha"></div>
-
 
         <p class="descricao">
 
-            Escolha uma opção para continuar.
+            Entenda como a IA pode ajudar você
+            e conheça os cuidados necessários
+            para utilizá-la com segurança.
 
         </p>
 
-
-        <!-- =========================
-             OPÇÕES
-        ========================== -->
-
         <div class="opcoes">
 
-
-            <!-- =========================
-                 OPÇÃO 1 — SITE
-            ========================== -->
-
             <a
-                href= https://amandasgaldino.github.io/computacao-nuvem-sustentabilidade/
+                href="https://amandasgaldino.github.io/computacao-nuvem-sustentabilidade/"
                 class="opcao"
             >
 
                 <div class="icone">
-                    ☁
+                    IA
                 </div>
-
 
                 <div>
 
@@ -518,30 +453,22 @@
                         Conhecer o projeto
                     </h2>
 
-
                     <p>
 
-                        Acesse nossa página web
-                        interativa e descubra como
-                        a computação em nuvem pode
-                        contribuir para a sustentabilidade.
+                        Acesse a página web interativa,
+                        conheça a Inteligência Artificial
+                        e descubra como ela pode ajudar
+                        em tarefas do dia a dia.
 
                     </p>
 
                 </div>
-
 
                 <span class="seta">
                     →
                 </span>
 
             </a>
-
-
-
-            <!-- =========================
-                 OPÇÃO 2 — GOOGLE FORMS
-            ========================== -->
 
             <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSeRQzANUAI_yOdc_QsF1TcEmFwUJ51s8gMz07EgyyzTPx3p7Q/viewform?usp=sharing&ouid=104215584824218539044"
@@ -551,27 +478,24 @@
             >
 
                 <div class="icone">
-                    📝
+                    Q
                 </div>
-
 
                 <div>
 
                     <h2>
-                        Pesquisa de satisfação
+                        Responder ao quiz
                     </h2>
-
 
                     <p>
 
-                        Responda à nossa pesquisa
-                        de satisfação e ajude a
-                        avaliar o nosso projeto.
+                        Teste seus conhecimentos
+                        sobre Inteligência Artificial
+                        e veja o que você aprendeu.
 
                     </p>
 
                 </div>
-
 
                 <span class="seta">
                     →
@@ -579,24 +503,17 @@
 
             </a>
 
-
         </div>
-
-
-        <!-- =========================
-             RODAPÉ
-        ========================== -->
 
         <p class="rodape">
 
             Obrigado por participar
-            do nosso projeto!
+            do nosso projeto! <br><br>
+            Amanda S. — Ciência da Computação — UNIP 2026
 
         </p>
 
-
     </main>
-
 
 </body>
 
