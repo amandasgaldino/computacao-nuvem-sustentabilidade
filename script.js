@@ -7,21 +7,20 @@ function mostrarCaracteristica(tipo) {
     const textos = {
 
         internet:
-            "As ferramentas de Inteligência Artificial podem ser acessadas pela internet a partir de diferentes dispositivos, como computadores, celulares e tablets.",
+            "Ferramentas de IA podem ajudar a pesquisar um tema, mas confira as informações importantes em fontes confiáveis antes de utilizá-las.",
 
         escala:
-            "As ferramentas de IA podem ser utilizadas em diferentes situações, desde tarefas simples do dia a dia até atividades que exigem maior processamento de informações.",
+            "A IA pode apoiar os estudos ao explicar conceitos e sugerir exemplos. Compare as respostas com materiais confiáveis e com o que foi ensinado.",
 
         flexibilidade:
-            "A Inteligência Artificial pode ser utilizada em diferentes locais e dispositivos para auxiliar em estudos, pesquisas, organização de informações, comunicação e trabalho.",
+            "Ferramentas de IA podem ajudar a organizar ideias e revisar textos. Leia o resultado e ajuste-o para que represente o que você realmente deseja comunicar.",
 
         compartilhamento:
-            "As ferramentas de IA podem apoiar diferentes pessoas em atividades de aprendizagem, produção de conteúdos, pesquisas e organização de informações."
+            "A IA pode apoiar a organização de tarefas e informações. Evite inserir dados pessoais, senhas, dados bancários ou documentos em ferramentas de IA."
     };
 
     caixa.textContent = textos[tipo];
 }
-
 
 function mostrarModelo(modelo) {
 
@@ -29,67 +28,64 @@ function mostrarModelo(modelo) {
         "modelo-info"
     );
 
-    if (modelo === "iaas") {
+    if (modelo === "assistentes") {
 
         caixa.innerHTML = `
             <h3>Assistentes de Inteligência Artificial</h3>
 
             <p>
-                São ferramentas que podem auxiliar o usuário em
-                tarefas como pesquisas, organização de informações,
-                estudos e esclarecimento de dúvidas.
+                São ferramentas que respondem a perguntas e podem ajudar em
+                pesquisas, estudos, organização de ideias e esclarecimento
+                de dúvidas. As respostas precisam ser avaliadas pelo usuário.
             </p>
 
             <p>
-                Exemplos: assistentes virtuais e ferramentas de IA
-                disponíveis em aplicativos e plataformas digitais.
+                Exemplos: assistentes virtuais e chatbots. Evite compartilhar
+                senhas, dados bancários, documentos ou informações privadas.
             </p>
         `;
     }
 
-    if (modelo === "paas") {
+    if (modelo === "generativa") {
 
         caixa.innerHTML = `
             <h3>IA Generativa</h3>
 
             <p>
                 É um tipo de Inteligência Artificial capaz de gerar
-                conteúdos a partir de comandos fornecidos pelo usuário,
-                como textos, imagens, áudios e outros materiais.
+                conteúdos a partir de comandos, como textos, imagens
+                e áudios. O resultado pode conter erros ou invenções.
             </p>
 
             <p>
-                Exemplos: ferramentas de geração de textos, imagens
-                e outros conteúdos utilizando Inteligência Artificial.
+                Exemplos: ferramentas de criação de textos e imagens.
+                Confira o conteúdo antes de publicar ou compartilhar.
             </p>
         `;
     }
 
-    if (modelo === "saas") {
+    if (modelo === "aplicativos") {
 
         caixa.innerHTML = `
             <h3>IA em Aplicativos e Plataformas</h3>
 
             <p>
-                A Inteligência Artificial também está presente em
-                aplicativos, mecanismos de busca, redes sociais e
-                plataformas digitais utilizadas no cotidiano.
+                Recursos de IA aparecem em aplicativos, mecanismos de busca,
+                redes sociais e outras plataformas digitais usadas no dia a dia.
             </p>
 
             <p>
-                Ela pode auxiliar em recomendações, pesquisas,
-                comunicação, organização de informações e outras tarefas.
+                Esses recursos podem sugerir conteúdos e apoiar pesquisas.
+                Verifique as configurações de privacidade e as fontes das informações.
             </p>
         `;
     }
 }
 
-
 function verificarMito(resposta) {
 
     const resultado =
         document.getElementById("resultado-mito");
-
 
     if (resposta === false) {
 
@@ -113,7 +109,6 @@ function verificarMito(resposta) {
         `;
     }
 }
-
 
 const perguntas = [
 
@@ -195,7 +190,7 @@ const perguntas = [
             "Compartilhar todos os dados pessoais",
             "Confiar em todas as respostas sem verificar",
             "Evitar a análise das informações",
-            "Ter cuidado com dados pessoais e informações sensíveis"
+            "Não compartilhar senhas, dados bancários ou documentos pessoais"
         ],
 
         correta: 3
@@ -250,7 +245,7 @@ const perguntas = [
         opcoes: [
             "Utilizar qualquer ferramenta sem preocupação",
             "Substituir completamente a avaliação humana",
-            "Utilizar a tecnologia de forma responsável, segura e crítica",
+            "Utilizar a tecnologia com senso crítico, proteger os dados e verificar as respostas",
             "Compartilhar todas as informações com as ferramentas de IA"
         ],
 
@@ -259,18 +254,15 @@ const perguntas = [
 
 ];
 
-
 let perguntaAtual = 0;
 
 let pontos = 0;
 
 let respondeu = false;
 
-
 document
     .getElementById("iniciarQuiz")
     .addEventListener("click", iniciarQuiz);
-
 
 function iniciarQuiz() {
 
@@ -284,11 +276,9 @@ function iniciarQuiz() {
         .querySelector(".quiz-intro")
         .classList.add("escondido");
 
-
     document
         .getElementById("resultadoQuiz")
         .classList.add("escondido");
-
 
     document
         .getElementById("quiz-area")
@@ -296,7 +286,6 @@ function iniciarQuiz() {
 
     mostrarPergunta();
 }
-
 
 function mostrarPergunta() {
 
@@ -357,7 +346,6 @@ function mostrarPergunta() {
 
     atualizarProgresso();
 }
-
 
 function verificarResposta(
     indice,
@@ -428,14 +416,12 @@ function verificarResposta(
         .classList.remove("escondido");
 }
 
-
 document
     .getElementById("proxima")
     .addEventListener(
         "click",
         proximaPergunta
     );
-
 
 function proximaPergunta() {
 
@@ -454,7 +440,6 @@ function proximaPergunta() {
     }
 }
 
-
 function atualizarProgresso() {
 
     const porcentagem =
@@ -468,7 +453,6 @@ function atualizarProgresso() {
         .style.width =
         `${porcentagem}%`;
 }
-
 
 function finalizarQuiz() {
 
@@ -491,20 +475,19 @@ function finalizarQuiz() {
     if (pontos <= 4) {
 
         mensagem.textContent =
-            "Você pode revisar alguns conceitos apresentados sobre Inteligência Artificial.";
+            "Você pode revisar os conceitos sobre IA e as orientações para usá-la com segurança.";
 
     } else if (pontos <= 7) {
 
         mensagem.textContent =
-            "Bom resultado! Você já compreendeu boa parte dos conceitos sobre Inteligência Artificial.";
+            "Bom resultado! Você compreendeu boa parte dos conceitos e cuidados no uso da IA.";
 
     } else {
 
         mensagem.textContent =
-            "Excelente! Você demonstrou um ótimo conhecimento sobre o uso de ferramentas de Inteligência Artificial.";
+            "Excelente! Você demonstrou conhecer os benefícios, as limitações e os cuidados no uso da IA.";
     }
 }
-
 
 function reiniciarQuiz() {
 
@@ -518,7 +501,6 @@ function reiniciarQuiz() {
 
     window.location.hash = "quiz";
 }
-
 
 function voltarTopo() {
 
