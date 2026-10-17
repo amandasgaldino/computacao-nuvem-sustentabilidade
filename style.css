@@ -271,7 +271,6 @@ nav a:hover {
         0 15px 40px rgba(33, 14, 29, 0.1);
 }
 
-
 .icone {
     font-size: 35px;
     color: var(--rosa-principal);
@@ -385,7 +384,6 @@ nav a:hover {
     border-color: var(--rosa-principal);
 }
 
-
 .fluxo-icone {
     font-size: 38px;
     color: var(--rosa-principal);
@@ -434,7 +432,6 @@ nav a:hover {
     color: var(--texto-claro);
     max-width: 550px;
 }
-
 
 .servidores-visual {
     display: flex;
@@ -508,7 +505,6 @@ nav a:hover {
         repeat(2, 1fr);
     gap: 20px;
 }
-
 
 .beneficio {
     padding: 35px;
@@ -957,3 +953,6 @@ footer p {
     }
 
 }
+
+
+
